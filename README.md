@@ -20,7 +20,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [vault_token_auth_backend_role.auth_backend_role](https://registry.terraform.io/providers/hashicorp/vault/3.14.0/docs/resources/token_auth_backend_role) | resource |
+| [vault_token.this](https://registry.terraform.io/providers/hashicorp/vault/3.14.0/docs/resources/token) | resource |
+| [vault_token_auth_backend_role.this](https://registry.terraform.io/providers/hashicorp/vault/3.14.0/docs/resources/token_auth_backend_role) | resource |
 
 ## Inputs
 
@@ -30,11 +31,15 @@ No modules.
 | <a name="input_disallowed_policies"></a> [disallowed\_policies](#input\_disallowed\_policies) | List of disallowed policies for given role. | `list(string)` | <pre>[<br>  "default"<br>]</pre> | no |
 | <a name="input_orphan"></a> [orphan](#input\_orphan) | If true, tokens created against this policy will be orphan tokens. | `bool` | `true` | no |
 | <a name="input_renewable"></a> [renewable](#input\_renewable) | Whether to disable the ability of the token to be renewed past its initial TTL. | `bool` | `true` | no |
-| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | The name of the role. | `string` | `"my-role"` | no |
+| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | The name of the role. | `string` | `""` | no |
 | <a name="input_token_explicit_max_ttl"></a> [token\_explicit\_max\_ttl](#input\_token\_explicit\_max\_ttl) | If set, will encode an explicit max TTL onto the token in number of seconds. | `string` | `"115200"` | no |
 | <a name="input_token_period"></a> [token\_period](#input\_token\_period) | If set, indicates that the token generated using this role should never expire. | `string` | `"259200"` | no |
+| <a name="input_ttl"></a> [ttl](#input\_ttl) | The TTL period of this token | `string` | `""` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_client_token"></a> [client\_token](#output\_client\_token) | Client vault token |
+| <a name="output_token_id"></a> [token\_id](#output\_token\_id) | Token ID |
 <!-- END_TF_DOCS -->
