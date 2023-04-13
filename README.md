@@ -26,9 +26,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_token_policies"></a> [token\_policies](#input\_token\_policies) | (Optional) | `set(string)` | n/a | yes |
-| <a name="input_token_role_name"></a> [token\_role\_name](#input\_token\_role\_name) | (Optional) | `string` | n/a | yes |
-| <a name="input_token_ttl"></a> [token\_ttl](#input\_token\_ttl) | (Optional) | `string` | n/a | yes |
+| <a name="input_token_policies"></a> [token\_policies](#input\_token\_policies) | (Optional) List of policies to attach to this token. | `set(string)` | n/a | yes |
+| <a name="input_token_role_name"></a> [token\_role\_name](#input\_token\_role\_name) | (Optional) The token role name. | `string` | n/a | yes |
+| <a name="input_token_ttl"></a> [token\_ttl](#input\_token\_ttl) | (Optional) The TTL period of this token. | `string` | n/a | yes |
 
 ## Outputs
 
